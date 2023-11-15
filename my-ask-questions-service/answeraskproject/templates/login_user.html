@@ -1,0 +1,25 @@
+{% extends 'layouts/base.html' %}
+
+{% load static %}
+
+{% block content %}
+<div class="text-center mb-4">
+        <h1>Log In</h1>
+</div>
+<form>
+    <div class="mb-3">
+        <label for="loginInput" class="form-label">Login</label>
+        <input type="text" class="form-control" id="loginInput" placeholder="Enter your login here">
+    </div>
+    <div class="mb-3">
+        <label for="passwordInput" class="form-label">Password</label>
+        <input type="password" class="form-control" id="passwordInput" placeholder="Password">
+    </div>
+    <div class="d-grid gap-2">
+        <button type="submit" class="btn btn-primary">Log in!</button>
+    </div>
+    <div class="text-center mt-3">
+        <a href="{% url 'register' %}">create new account</a>
+    </div>
+</form>
+{% endblock %}

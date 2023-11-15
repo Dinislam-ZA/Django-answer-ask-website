@@ -1,0 +1,26 @@
+{% extends 'layouts/base.html' %}
+
+{% load static %}
+
+{% block content %}
+<h1> NEW QUESTION </h1>
+<form>
+  <div class="mb-3">
+    <label for="question-title" class="form-label">Title</label>
+    <input type="text" class="form-control" id="question-title" placeholder="Why it's not working..">
+  </div>
+  <div class="mb-3">
+    <label for="question-content" class="form-label">Text</label>
+    <textarea rows="10" class="form-control" id="question-content" placeholder="May u explain me what i'm doing wrong"></textarea>
+  </div>
+  <div class="mb-3">
+    <label class="form-check-label" for="tags select">Tags</label>
+    <select class="form-select" aria-label="Default select example" id="tags select">
+      <option selected>No tags</option>
+      <option value="1">Black jack</option>
+      <option value="2">Python</option>
+    </select>
+  </div>
+  <button type="submit" class="btn btn-primary">Ask!</button>
+</form>
+{% endblock %}

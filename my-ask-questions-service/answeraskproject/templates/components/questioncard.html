@@ -1,0 +1,33 @@
+{% load static %}
+
+<!-- Question Card -->
+<div class="container mt-3">
+  <div class="card mb-3 w-100">
+    <div class="row g-0">
+      <div class="col-4">
+        <img src="{% static 'img/monkey.png' %}" alt="Avatar" class="img-fluid rounded-start card-image">
+      </div>
+      <div class="col-8">
+        <div class="card-body">
+          <h5 class="card-title">{{ question.title }}</h5>
+          <p class="card-text">{{ question.content|truncatechars:255 }}...</p>
+          {% if show_answer_button == True %}
+          <a href="{% url 'question' question_id=question.id %}" class="btn btn-primary mt-auto">answers ({{question.answers_num}}) </a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+      <div class="card-footer d-flex justify-content-between align-items-center mt-auto">
+        <div>
+          <button class="btn btn-outline-success">👍 {{question.positive_likes}}</button>
+          <button class="btn btn-outline-danger">👎 {{question.negative_likes}}</button>
+        </div>
+        <div>
+          <small class="text-muted">Tags:</small>
+          {% for tag in question.tags.all|slice:":5" %}
+            <span class="badge bg-secondary tags">{{ tag.name }}</span>
+          {% endfor %}
+        </div>
+      </div>
+  </div>
+</div>

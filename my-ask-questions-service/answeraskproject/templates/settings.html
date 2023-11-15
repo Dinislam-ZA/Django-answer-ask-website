@@ -1,0 +1,26 @@
+{% extends 'layouts/base.html' %}
+
+{% load static %}
+
+{% block content %}
+<h1>Settings: Dr. Pepper</h1>
+<form>
+    <div class="mb-3">
+        <label for="login" class="form-label">Login</label>
+        <input type="text" class="form-control" id="login" placeholder="dr_pepper">
+    </div>
+    <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" placeholder="dr.pepper@mail.ru">
+    </div>
+    <div class="mb-3">
+        <label for="nickname" class="form-label">Nickname</label>
+        <input type="text" class="form-control" id="nickname" placeholder="Dr. Pepper">
+    </div>
+    <div class="mb-3">
+        <label for="avatar" class="form-label">Upload avatar</label>
+        <input class="form-control" type="file" id="avatar">
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>
+{% endblock %}

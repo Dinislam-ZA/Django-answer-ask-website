@@ -1,0 +1,38 @@
+{% extends 'layouts/base.html' %}
+
+{% load static %}
+
+{% block content %}
+<div class="text-center mb-4">
+        <h1>Registration</h1>
+</div>
+<form>
+    <div class="mb-3">
+        <label for="loginReg" class="form-label">Login</label>
+        <input type="text" class="form-control" id="loginReg" placeholder="dr_pepper">
+    </div>
+    <div class="mb-3">
+        <label for="emailReg" class="form-label">Email</label>
+        <input type="email" class="form-control" id="emailReg" placeholder="dr.pepper@mail.ru">
+    </div>
+    <div class="mb-3">
+        <label for="nicknameReg" class="form-label">Nickname</label>
+        <input type="text" class="form-control" id="nicknameReg" placeholder="Dr. Pepper">
+    </div>
+    <div class="mb-3">
+        <label for="passwordReg" class="form-label">Password</label>
+        <input type="password" class="form-control" id="passwordReg" placeholder="Password">
+    </div>
+    <div class="mb-3">
+        <label for="repeatPasswordReg" class="form-label">Repeat password</label>
+        <input type="password" class="form-control" id="repeatPasswordReg" placeholder="Repeat Password">
+    </div>
+    <div class="mb-3">
+        <label for="uploadAvatar" class="form-label">Upload avatar</label>
+        <input class="form-control" type="file" id="uploadAvatar">
+    </div>
+    <div class="d-grid gap-2">
+        <button type="submit" class="btn btn-primary">Register!</button>
+    </div>
+</form>
+{% endblock %}
